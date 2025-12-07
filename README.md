@@ -8,7 +8,7 @@ This is my personal portfolio website as a **Minecraft server & plugin developer
 - 🎥 Skripts and servers made for YouTubers like **NotRitikkk**
 
 Live demo: *(add your Netlify link here, e.g.)*  
-`[https://your-site-name.netlify.app](https://epicgaming6211.netlify.app/)`
+`https://epicgaming6211.netlify.app/`
 
 ---
 
