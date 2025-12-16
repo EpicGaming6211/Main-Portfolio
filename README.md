@@ -16,12 +16,21 @@ Live demo: *(add your Netlify link here, e.g.)*
 
 ```text
 .
-├─ index.html        # Main landing page (about, stats, overview)
-├─ servers.html      # Detailed list of servers I've built
-├─ plugins.html      # Plugins I've created (VkRTP, VkTPA, VkPVPKIT)
-├─ youtubers.html    # YouTuber collaborations (e.g. NotRitikkk)
-├─ skripts.html      # Skripts made specifically for YouTuber videos
-├─ hireme.html       # Services, packages, and how to hire me
-├─ faq.html          # Frequently asked questions
-├─ style.css         # Main styles (layout, cards, theme, etc.)
-└─ script.js         # Theme toggle + dynamic year
+# Vansh Kanodia's Portfolio
+
+## Files Included
+- index.html - Main HTML file
+- style.css - Stylesheet with all animations
+- script.js - JavaScript for interactivity
+
+## How to Use
+1. Extract all files to a folder
+2. Open index.html in your browser
+3. Customize the content as needed
+
+## Customization Tips
+- Edit the HTML to change content
+- Modify CSS variables in :root to change colors
+- Add your own images and links
+
+Enjoy your new portfolio!
