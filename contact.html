@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - RealVansh</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="gradient-bg">
+  
+  <!-- FIXED NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">RealVansh</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="plugins.html">Plugins</a></li>
+        <li><a href="servers.html">Servers</a></li>
+        <li><a href="websites.html">Websites</a></li>
+        <li><a href="prices.html">Prices</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="contact.html" class="cta-btn neon-purple">Start Project</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="particles-container" id="particles"></div>
+
+  <!-- Hero -->
+  <section class="hero" style="padding-top: 120px; min-height: 60vh; text-align: center;">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <h1 class="gradient-text" style="font-size: 5rem;">Let's Build</h1>
+      <p style="font-size: 1.5rem; color: #b4b4b4; margin-top: 1rem;">
+        ⚡ <strong>Currently accepting limited clients</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="section">
+    <div class="glass card" style="max-width: 700px; margin: 0 auto; padding: 4rem; border-radius: 2.5rem;">
+      <h2 style="text-align: center; font-size: 3rem; margin-bottom: 3rem; background: linear-gradient(135deg, #a77bf2, #22c55e); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+        Start Your Project
+      </h2>
+      
+      <!-- FORM - WORKING DISCORD WEBHOOK -->
+      <form id="contactForm">
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
+        
+        <div class="form-group">
+          <label>Discord (Recommended)</label>
+          <input type="text" id="discord" name="discord" placeholder="username#1234 or @username">
+        </div>
+        
+        <div class="form-group">
+          <label>Project Type</label>
+          <select id="projectType" name="projectType" required>
+            <option value="">Select project</option>
+            <option value="plugin">🟢 Basic Plugin (₹500+)</option>
+            <option value="advanced">🔵 Advanced System (₹1500+)</option>
+            <option value="server">🔴 Full Server (₹3000+)</option>
+            <option value="website">🟣 Website (₹1000+)</option>
+            <option value="full">💎 Complete Package</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label>Budget</label>
+          <select id="budget" name="budget" required>
+            <option value="">Select budget</option>
+            <option value="500-1500">💰 ₹500 - ₹1500</option>
+            <option value="1500-3000">💎 ₹1500 - ₹3000</option>
+            <option value="3000-10000">⭐ ₹3000 - ₹10000</option>
+            <option value="10000+">💼 ₹10000+</option>
+            <option value="discuss">📞 Custom Quote</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label>Message</label>
+          <textarea id="message" name="message" rows="6" placeholder="Tell me about your project... Server size? Features needed? Timeline?" required></textarea>
+        </div>
+        
+        <button type="submit" class="hero-cta" id="submitBtn" style="width: 100%; font-size: 1.2rem; padding: 1.5rem;">
+          🚀 Send Message to Discord
+        </button>
+      </form>
+
+      <!-- Loading/Status -->
+      <div id="formStatus" style="margin-top: 1.5rem; text-align: center; display: none;"></div>
+    </div>
+  </div>
+
+  <!-- Discord Direct -->
+  <section class="section" style="text-align: center;">
+    <h3 style="font-size: 2rem; margin-bottom: 1rem;">Or Join Discord Directly</h3>
+    <p style="color: #b4b4b4; font-size: 1.2rem; margin-bottom: 2rem;">Fastest response - I'm online 24/7</p>
+    <a href="https://discord.gg/Nk92SEndKT" target="_blank" class="cta-btn neon-green" style="padding: 1.25rem 3rem; font-size: 1.2rem; display: inline-block;">
+      🎮 Join Discord Server
+    </a>
+  </section>
+
+  <!-- Scripts -->
+  <script src="js/particles.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // 🔥 DISCORD WEBHOOK INTEGRATION
+    const DISCORD_WEBHOOK_URL = 'https://discord.com/api/webhooks/1459454561017401449/ZB-n9CAGG0Q2wO89LZWYAT0yFh_IwOHMraLuSU9m1KR4NUYlJQwlTtaGw1UwKFRthI7h'; // ← PASTE YOUR WEBHOOK HERE
+    
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      const submitBtn = document.getElementById('submitBtn');
+      const statusDiv = document.getElementById('formStatus');
+      const formData = {
+        name: document.getElementById('name').value,
+        discord: document.getElementById('discord').value,
+        projectType: document.getElementById('projectType').value,
+        budget: document.getElementById('budget').value,
+        message: document.getElementById('message').value
+      };
+
+      // Loading state
+      submitBtn.innerHTML = '⏳ Sending...';
+      submitBtn.disabled = true;
+      statusDiv.style.display = 'block';
+      statusDiv.innerHTML = '⏳ Connecting to Discord...';
+
+      try {
+        const embed = {
+          title: `🚀 New Project Lead - ${formData.name}`,
+          color: 0xA77BF2, // Purple color
+          fields: [
+            { name: '👤 Name', value: formData.name || 'Not provided', inline: true },
+            { name: '💬 Discord', value: formData.discord || 'Not provided', inline: true },
+            { name: '🎯 Project Type', value: formData.projectType, inline: true },
+            { name: '💰 Budget', value: formData.budget, inline: true },
+            { name: '📝 Message', value: formData.message.substring(0, 1000), inline: false }
+          ],
+          footer: {
+            text: `RealVansh Portfolio • ${new Date().toLocaleString()}`
+          },
+          timestamp: new Date().toISOString()
+        };
+
+        const response = await fetch(DISCORD_WEBHOOK_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ embeds: [embed] })
+        });
+
+        if (response.ok) {
+          statusDiv.innerHTML = '✅ Message sent to Discord! I\'ll respond within 24h 🚀';
+          statusDiv.style.color = '#22c55e';
+          this.reset();
+        } else {
+          throw new Error('Webhook failed');
+        }
+      } catch (error) {
+        statusDiv.innerHTML = '❌ Failed to send. Please join Discord directly above!';
+        statusDiv.style.color = '#ef4444';
+        console.error('Webhook error:', error);
+      }
+
+      // Reset button
+      setTimeout(() => {
+        submitBtn.innerHTML = '🚀 Send Message to Discord';
+        submitBtn.disabled = false;
+      }, 3000);
+    });
+  </script>
+</body>
+</html>

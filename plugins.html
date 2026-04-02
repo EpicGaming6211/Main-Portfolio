@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plugins - RealVansh</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="gradient-bg">
+  <!-- Navbar (same as home) -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">RealVansh</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="plugins.html">Plugins</a></li>
+      <li><a href="servers.html">Servers</a></li>
+      <li><a href="websites.html">Websites</a></li>
+      <li><a href="prices.html">Prices</a></li>
+      <li><a href="reviews.html" class="active">Reviews</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="cta-btn">Start Project</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</nav>
+
+    <div class="nav-container">
+      <div class="logo" onclick="window.location.href='index.html'">RealVansh</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#plugins" class="active">Plugins</a></li>
+        <li><a href="servers.html">Servers</a></li>
+        <li><a href="websites.html">Websites</a></li>
+        <li><a href="prices.html">Prices</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="cta-btn">Start Project</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="particles-container" id="particles"></div>
+
+  <!-- Hero -->
+  <section class="hero" style="padding-top: 120px; min-height: 60vh;">
+    <div class="hero-content" style="grid-template-columns: 1fr; text-align: center;">
+      <div>
+        <h1 class="gradient-text" style="font-size: 5rem;">Custom Plugins</h1>
+        <p style="font-size: 1.5rem; color: #b4b4b4; margin-top: 1rem;">Performance-optimized plugins for PaperMC servers</p>
+        <a href="contact.html" class="hero-cta" style="margin-top: 2rem; display: inline-block;">Get Custom Plugin</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- All Plugins -->
+  <section class="section">
+    <div class="card-grid" style="max-width: 1200px;">
+      <!-- VKMaceControl Detailed -->
+      <div class="card plugin-card" style="grid-column: span 2;">
+        <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; align-items: start;">
+          <div style="height: 300px; background: linear-gradient(135deg, #a77bf2, #22c55e); border-radius: 1.5rem; position: relative; overflow: hidden;">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 4rem;">⚔️</div>
+          </div>
+          <div>
+            <h2 style="font-size: 3rem; margin-bottom: 1rem;">VKMaceControl</h2>
+            <p style="font-size: 1.25rem; color: #b4b4b4; margin-bottom: 2rem;">Advanced mace combat system with custom smash mechanics and PvP optimization.</p>
+            <div style="display: flex; gap: 2rem; margin-bottom: 2rem;">
+              <div class="plugin-stats">
+                <div style="font-size: 2rem; color: #22c55e;">12.4K</div>
+                <div>Downloads</div>
+              </div>
+              <div class="plugin-stats">
+                <div style="font-size: 2rem; color: #a77bf2;">4.9</div>
+                <div>⭐ Rating</div>
+              </div>
+            </div>
+            <a href="https://modrinth.com/plugin/vkmacecontrol" target="_blank" class="plugin-link" style="font-size: 1.2rem;">View on Modrinth →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- VKSpearSMP Detailed -->
+      <div class="card plugin-card" style="grid-column: span 2;">
+        <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; align-items: start;">
+          <div style="height: 300px; background: linear-gradient(135deg, #22c55e, #06b6d4); border-radius: 1.5rem; position: relative; overflow: hidden;">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 4rem;">🏹</div>
+          </div>
+          <div>
+            <h2 style="font-size: 3rem; margin-bottom: 1rem;">VKSpearSMP</h2>
+            <p style="font-size: 1.25rem; color: #b4b4b4; margin-bottom: 2rem;">Spear mechanics for SMP servers with ranged combat and piercing damage.</p>
+            <div style="display: flex; gap: 2rem; margin-bottom: 2rem;">
+              <div class="plugin-stats">
+                <div style="font-size: 2rem; color: #22c55e;">8.7K</div>
+                <div>Downloads</div>
+              </div>
+              <div class="plugin-stats">
+                <div style="font-size: 2rem; color: #a77bf2;">4.8</div>
+                <div>⭐ Rating</div>
+              </div>
+            </div>
+            <a href="https://modrinth.com/plugin/vkspearsmp" target="_blank" class="plugin-link" style="font-size: 1.2rem;">View on Modrinth →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-card glass card">
+      <h2 style="font-size: 4rem;">Need a Custom Plugin?</h2>
+      <p style="font-size: 1.5rem; color: #b4b4b4; margin: 2rem 0;">From ₹500+ • Starting Today</p>
+      <a href="contact.html" class="hero-cta">Get Custom Quote</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="padding: 4rem 2rem; text-align: center; color: #666; border-top: 1px solid rgba(255,255,255,0.1);">
+    <p>© 2024 RealVansh. Custom Minecraft Development.</p>
+  </footer>
+
+  <script src="js/particles.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
